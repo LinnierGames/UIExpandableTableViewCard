@@ -7,22 +7,36 @@
 //
 
 import UIKit
+import UIExpandableTableViewCard
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var listOfTaps = [String]()
+    
+    @IBOutlet weak var tableView: UIExpandableTableViewCard!
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listOfTaps.count
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        cell.textLabel?.text = "cell"
         
+        return cell
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        listOfTaps.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        self.tableView.updateTableViewHeight()
     }
-
+    
+    @IBAction func pressAddARow(_ sender: Any) {
+        listOfTaps.append("tap")
+        tableView.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        tableView.updateTableViewHeight()
+    }
 }
+
 
