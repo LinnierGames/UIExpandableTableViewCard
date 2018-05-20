@@ -11,9 +11,7 @@ import UIExpandableTableViewCard
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var listOfTaps = [String]()
-    
-    @IBOutlet weak var tableView: UIExpandableTableViewCard!
+    // MARK: - RETURN VALUES
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOfTaps.count
@@ -26,11 +24,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    // MARK: - VOID METHODS
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         listOfTaps.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
         self.tableView.updateTableViewHeight()
     }
+    
+    // MARK: - IBACTIONS
+    
+    var listOfTaps = [String]()
+    
+    @IBOutlet weak var tableView: UIExpandableTableViewCard!
+    
+    // MARK: - LIFE CYCLE
     
     @IBAction func pressAddARow(_ sender: Any) {
         listOfTaps.append("tap")

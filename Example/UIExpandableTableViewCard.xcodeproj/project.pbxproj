@@ -44,9 +44,9 @@
 		8B68FB92CCAA2D8A73E36513 /* Pods-UIExpandableTableViewCard_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIExpandableTableViewCard_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIExpandableTableViewCard_Tests/Pods-UIExpandableTableViewCard_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B5BE66B4283DFB6983008798 /* Pods-UIExpandableTableViewCard_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIExpandableTableViewCard_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIExpandableTableViewCard_Example/Pods-UIExpandableTableViewCard_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BD11951F65C937E9242CE0FF /* Pods_UIExpandableTableViewCard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIExpandableTableViewCard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9990939E0F75EB35EC35470 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		EAEC777643259E6F186DD3CD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		FE300B21AA548DE69AE4A2C8 /* UIExpandableTableViewCard.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = UIExpandableTableViewCard.podspec; path = ../UIExpandableTableViewCard.podspec; sourceTree = "<group>"; };
+		E9990939E0F75EB35EC35470 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EAEC777643259E6F186DD3CD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FE300B21AA548DE69AE4A2C8 /* UIExpandableTableViewCard.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UIExpandableTableViewCard.podspec; path = ../UIExpandableTableViewCard.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
