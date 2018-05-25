@@ -37,7 +37,7 @@ open class UIExpandableTableViewCard: UIScrollView {
         
         initLayout()
     }
-
+    
     // MARK: - RETURN VALUES
     
     // MARK: - VOID METHODS
@@ -49,7 +49,7 @@ open class UIExpandableTableViewCard: UIScrollView {
         self.showsHorizontalScrollIndicator = false
         self.alwaysBounceHorizontal = false
         self.alwaysBounceVertical = true
-
+        
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = 8.0
         
@@ -111,7 +111,11 @@ open class UIExpandableTableViewCard: UIScrollView {
         }
         self.tableViewHeightConstraint.constant = height
         
-        UIView.animate(withDuration: 0.3) { [unowned self] in
+        if animated {
+            UIView.animate(withDuration: 0.3) { [unowned self] in
+                self.layoutIfNeeded()
+            }
+        } else {
             self.layoutIfNeeded()
         }
     }
@@ -119,5 +123,5 @@ open class UIExpandableTableViewCard: UIScrollView {
     // MARK: - IBACTIONS
     
     // MARK: - LIFE CYCLE
-
+    
 }
